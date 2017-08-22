@@ -17,6 +17,6 @@ wp.on('alert', (page) => {
 })
 wp.on('check', (oldPage, newPage) => {
 }
-wp.on('error', (err) => 'console.log(error)')
+wp.on('error', (err) => console.log(error))
 ``` 
 
