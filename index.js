@@ -1,0 +1,1 @@
+module.exports = require('./bin/web_monitoring')
