@@ -1,0 +1,19 @@
+{
+  "name": "web-monitoring",
+  "version": "1.0.0",
+  "description": "Simple web monitoring in nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antoniomuso/web-monitoring.git"
+  },
+  "author": "antoniomuso",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antoniomuso/web-monitoring/issues"
+  },
+  "homepage": "https://github.com/antoniomuso/web-monitoring#readme"
+}
