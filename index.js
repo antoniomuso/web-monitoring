@@ -1,1 +1,1 @@
-module.exports = require('./bin/web_monitoring')
+module.exports = require('./lib/web_monitoring.js')
