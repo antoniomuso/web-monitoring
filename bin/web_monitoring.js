@@ -1,4 +1,4 @@
-var WebPage = require('./web_page.js')
+const WebPage = require('./web_page.js')
 
 module.exports.monitor = function (url, options) {
     if (options instanceof Object || 

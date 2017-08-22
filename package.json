@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/antoniomuso/web-monitoring/issues"
   },
-  "homepage": "https://github.com/antoniomuso/web-monitoring#readme"
+  "homepage": "https://github.com/antoniomuso/web-monitoring#readme",
+  "dependencies": {
+    "request": "^2.81.0"
+  }
 }
