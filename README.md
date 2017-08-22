@@ -6,7 +6,7 @@ Simple web monitoring in node js
 var wm = require('web-monitoring')
 var options = 
 { 
-  while: (oldPage,newPage) => {return oldPage === newPage},
+  whileControl: (oldPage,newPage) => {return oldPage === newPage},
   lapse: 5000
 }
 var wp = wm.monitor('www.webpage.com', options)
