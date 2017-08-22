@@ -2,10 +2,16 @@ var wm = require('./../index.js')
 
 var options = 
 { 
-  whileControl: (oldPage,newPage) => { return oldPage !== newPage},
+  whileControl: (oldPage,newPage) => { 
+    
+    console.log(oldPage)
+    console.log("---------------------------------------------")
+    console.log(newPage)
+    return oldPage !== newPage
+  },
   lapse: 5000
 }
-var wp = wm.monitor('http://twiki.di.uniroma1.it/twiki/view', options).start().start()
+var wp = wm.monitor('http://www.google.it', options).start().start()
 wp.on('start', (url) => console.log(`monitoring of '${url}' start`))
 wp.on('alert', (url,page) => {
   console.log('page changed')
