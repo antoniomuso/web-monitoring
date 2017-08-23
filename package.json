@@ -8,6 +8,9 @@
     "test2": "node ./test/test2.js",
     "test3": "node ./test/test3.js"
   },
+  "bin": {
+    "web-monitoring": "bin/web-monitoring"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/antoniomuso/web-monitoring.git"
