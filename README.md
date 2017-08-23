@@ -5,8 +5,7 @@ Simple web monitoring in node js
 `npm install web-monitoring -g`
 ## Use application
 `web-monitoring [uri] [lapse of control] [percentage of page changing]
-`
-`web-monitoring http://google.it 5000 0.1`
+web-monitoring http://google.it 5000 0.1`
 
 ## Use example 1°
 ```javascript
