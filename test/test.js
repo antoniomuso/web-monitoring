@@ -1,17 +1,14 @@
 var wm = require('./../index.js')
-
+var fs = require('fs')
 var options = 
 { 
   whileControl: (oldPage,newPage) => { 
-    
-    console.log(oldPage)
-    console.log("---------------------------------------------")
-    console.log(newPage)
     return oldPage !== newPage
   },
-  lapse: 5000
+  lapse: 2000,
+  percentageDiff: 0.1 // if whileControl exist this will not use
 }
-var wp = wm.monitor('http://www.google.it', options).start().start()
+var wp = wm.monitor('https://www.google.com/', options).start().start()
 wp.on('start', (url) => console.log(`monitoring of '${url}' start`))
 wp.on('alert', (url,page) => {
   console.log('page changed')
