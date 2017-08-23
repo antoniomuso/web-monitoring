@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+
+
+// web-monitoring 'http://google.it' 2000
+var wm = require('./../index.js')
+
+var options = {
+    lapse: Number(process.argv[3]) ? Number(process.argv[3]) : 5000,
+    percentageDiff: Number(process.argv[4]) ? Number(process.argv[4]) : 0.1 // if whileControl exist this will not use
+}
+
+wp = wm.monitor( process.argv[2], options)
+            .start()
+            .on('start', (uri) => console.log(`monitoring of '${uri}' start`))
+            .on('alert', (uri,page) => 
+                {
+                    console.log(`page ${uri} chaged`)
+                    wp.stop()
+                })
+            .on('error', (error) => {
+                throw error
+            })
+
+
