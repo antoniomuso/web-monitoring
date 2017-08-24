@@ -22,7 +22,9 @@
   },
   "homepage": "https://github.com/antoniomuso/web-monitoring#readme",
   "dependencies": {
+    "command-line-args": "^4.0.7",
     "leven": "^2.1.0",
+    "nodemailer": "^4.0.1",
     "request": "^2.81.0",
     "request-promise": "^4.2.1"
   },
