@@ -1,5 +1,5 @@
 # web-monitoring
-Simple web monitoring in node js 
+wb-monitoring is a small web page monitoring written in node.js, you can monitor changing of a web page.
 
 ## How to install
 `npm install web-monitoring -g`
