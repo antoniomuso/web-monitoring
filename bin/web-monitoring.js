@@ -46,7 +46,7 @@ if (!values.uri) throw new URIError('Uri is obligatory')
         lapse: values.lapse ? values.lapse : 5000,
         percentageDiff: values.percentage 
             ? values.percentage 
-            : await bp(values.NumberOfTest ? values.NumberOfTest : 15, values.uri) // if whileControl exist this will not use
+            : await bp(values.NumberOfTest ? values.NumberOfTest : 10, values.uri) // if whileControl exist this will not use
     }
 
     wp = wm.monitor(values.uri, options)
