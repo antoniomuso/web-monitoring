@@ -9,7 +9,7 @@
     "test3": "node ./test/test3.js"
   },
   "bin": {
-    "web-monitoring": "bin/web-monitoring"
+    "web-monitoring": "bin/web-monitoring.js"
   },
   "repository": {
     "type": "git",
