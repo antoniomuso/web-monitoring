@@ -5,13 +5,14 @@ wb-monitoring is a small web page monitoring written in node.js, you can monitor
 `npm install web-monitoring -g`
 ## Use application
 ```
-web-monitoring -u [uri] -l [lapse of control] -p [percentage of page changing] -e [email sender] [password sender] [email receiver]
-web-monitoring -u http://google.it -l 5000 -p 0.1
+web-monitoring -u [uri] -l [lapse of control] -p [percentage of page changing] -t [number of test for calculate automatic percentage of page changing] -e [email sender] [password sender] [email receiver]
+web-monitoring -u http://google.com -l 5000 -p 0.1
 or 
-web-monitoring -u http://google.it -l 5000 -p 0.1 -e myname@host.com passwordmyname myname@host.com
+web-monitoring -u http://google.com -l 5000 -p 0.1 -e myname@host.com passwordmyname myname@host.com
 or 
-web-monitoring -u http://google.it -l 5000 -p 0.1 -e myname@host.com passwordmyname myname@host.com -loop
-
+web-monitoring -u http://google.com -e myname@host.com passwordmyname myname@host.com
+or
+web-monitoring -u http://google.com -l 5000 -p 0.1 -e myname@host.com passwordmyname myname@host.com -loop
 Without command -loop,  the program stop at first page change
 ```
 
