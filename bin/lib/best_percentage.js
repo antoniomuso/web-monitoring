@@ -15,7 +15,7 @@ module.exports = async function (nTest, uri) {
     let page = undefined
     await request(opt).then( (pageBody) => {
         page = pageBody
-        console.log(pageBody.length)
+        //console.log(pageBody.length)
     }).catch((err) => {
         throw err
     })
@@ -31,7 +31,7 @@ module.exports = async function (nTest, uri) {
             throw err
         })
     }
-    //  console.log(`Max: ${percentage}`)
+    console.log(`Max percentage: ${percentage}`)
 
     return percentage
 
