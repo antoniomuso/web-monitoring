@@ -24,7 +24,7 @@ var options =
   whileControl: (oldPage,newPage) => {return oldPage === newPage},
   lapse: 5000
 }
-var wp = wm.monitor('http://www.gogle.com', options)
+var wp = wm.monitor('http://www.google.com', options)
       .start()
       .on('start', (url) => console.log(`monitoring of '${url}' start`))
       .on('alert', (url,page) => {
@@ -44,7 +44,7 @@ var options =
   lapse: 5000,
   percentageDiff: 0.1
 }
-var wp = wm.monitor('http://www.gogle.com', options)
+var wp = wm.monitor('http://www.google.com', options)
       .start()
       .on('start', (url) => console.log(`monitoring of '${url}' start`))
       .on('alert', (url,page) => {
