@@ -40,12 +40,13 @@ if (values.email && values.email.length === 3) {
         text: `${values.uri} was change`
     };
 }
+if (!values.uri) throw new URIError('Uri is obligatory')
 bp(values.NumberOfTest ? values.NumberOfTest : 15, values.uri).then((perc) => {
     var options = {
         lapse: values.lapse ? values.lapse : 5000,
         percentageDiff: values.percentage ? values.percentage : perc // if whileControl exist this will not use
     }
-    if (!values.uri) throw new URIError('Uri is obligatory')
+    
 
     wp = wm.monitor(values.uri, options)
         .start()
