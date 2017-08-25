@@ -5,7 +5,7 @@
 const wm = require('./../index.js')
 const commandLineArgs = require('command-line-args')
 const nodemailer = require('nodemailer');
-const bp = require('./lib/best_percentage.js')
+const bp = require('./lib/test_percentage.js')
 
 const optionDefinitionsArgs = [
     { name: 'uri', alias: 'u', type: String },
@@ -13,7 +13,7 @@ const optionDefinitionsArgs = [
     { name: 'lapse', alias: 'l', type: Number },
     { name: 'percentage', alias: 'p', type: Number },
     { name: 'loop', alias: 'o', type: Boolean },
-    {name: 'NumberOfTest', alias: 't', type:Number }
+    { name: 'NumberOfTest', alias: 't', type: Number }
 ]
 
 var values = commandLineArgs(optionDefinitionsArgs)
@@ -32,21 +32,22 @@ if (values.email && values.email.length === 3) {
             user: values.email[0],
             pass: values.email[1]
         }
-    });
+    })
     var mailOptions = {
         from: values.email[0],
         to: values.email[2],
         subject: `Notification Changing page ${values.uri}`,
         text: `${values.uri} was change`
-    };
+    }
 }
 if (!values.uri) throw new URIError('Uri is obligatory')
-bp(values.NumberOfTest ? values.NumberOfTest : 15, values.uri).then((perc) => {
+;(async function () {
     var options = {
         lapse: values.lapse ? values.lapse : 5000,
-        percentageDiff: values.percentage ? values.percentage : perc // if whileControl exist this will not use
+        percentageDiff: values.percentage 
+            ? values.percentage 
+            : await bp(values.NumberOfTest ? values.NumberOfTest : 15, values.uri) // if whileControl exist this will not use
     }
-    
 
     wp = wm.monitor(values.uri, options)
         .start()
@@ -70,6 +71,6 @@ bp(values.NumberOfTest ? values.NumberOfTest : 15, values.uri).then((perc) => {
         })
 
 
-}).catch((err) => {
+})().catch((err) => {
     throw new Error(err)
 })
