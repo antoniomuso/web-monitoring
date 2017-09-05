@@ -52,9 +52,6 @@ if (!values.uri) throw new URIError('Uri is obligatory')
     wp = wm.monitor(values.uri, options)
         .start()
         .on('start', (uri) => console.log(`monitoring of '${uri}' start`))
-        .on('check', () => {
-            console.log('check')
-        })
         .on('alert', (uri, page) => {
             if (values.email && values.email.length === 3) {
                 transporter.sendMail(mailOptions, function (error, info) {
