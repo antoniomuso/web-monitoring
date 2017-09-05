@@ -1,6 +1,6 @@
 {
   "name": "web-monitoring",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "Simple web monitoring in nodejs",
   "main": "index.js",
   "scripts": {
