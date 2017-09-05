@@ -10,10 +10,10 @@ const bp = require('./lib/test_percentage.js')
 const optionDefinitionsArgs = [
     { name: 'uri', alias: 'u', type: String },
     { name: 'email', alias: 'e', multiple: true, type: String },
-    { name: 'lapse', alias: 'l', type: Number },
+    { name: 'lapse', alias: 'l', type: Number ,defaultValue: 5000},
     { name: 'percentage', alias: 'p', type: Number },
-    { name: 'loop', alias: 'o', type: Boolean },
-    { name: 'NumberOfTest', alias: 't', type: Number }
+    { name: 'loop', alias: 'o', type: Boolean , defaultValue: false },
+    { name: 'NumberOfTest', alias: 't', type: Number , defaultValue: 10 }
 ]
 
 var values = commandLineArgs(optionDefinitionsArgs)
@@ -43,15 +43,18 @@ if (values.email && values.email.length === 3) {
 if (!values.uri) throw new URIError('Uri is obligatory')
 ;(async function () {
     var options = {
-        lapse: values.lapse ? values.lapse : 5000,
+        lapse: values.lapse ,
         percentageDiff: values.percentage 
             ? values.percentage 
-            : await bp(values.NumberOfTest ? values.NumberOfTest : 10, values.uri) // if whileControl exist this will not use
+            : await bp(values.NumberOfTest, values.uri) // if whileControl exist this will not use
     }
 
     wp = wm.monitor(values.uri, options)
         .start()
         .on('start', (uri) => console.log(`monitoring of '${uri}' start`))
+        .on('check', () => {
+            console.log('check')
+        })
         .on('alert', (uri, page) => {
             if (values.email && values.email.length === 3) {
                 transporter.sendMail(mailOptions, function (error, info) {
@@ -64,6 +67,7 @@ if (!values.uri) throw new URIError('Uri is obligatory')
             } else {
                 console.log(`page ${uri} chaged`)
             }
+            console.log(values.loop)
             if (!values.loop) wp.stop()
         })
         .on('error', (error) => {
