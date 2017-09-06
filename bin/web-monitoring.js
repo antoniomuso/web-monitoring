@@ -64,7 +64,6 @@ if (!values.uri) throw new URIError('Uri is obligatory')
             } else {
                 console.log(`page ${uri} chaged`)
             }
-            console.log(values.loop)
             if (!values.loop) wp.stop()
         })
         .on('error', (error) => {
