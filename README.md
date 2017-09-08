@@ -21,7 +21,7 @@ Without command -loop,  the program stop at first page change
 var wm = require('web-monitoring')
 var options = 
 { 
-  whileControl: (oldPage,newPage) => {return oldPage === newPage},
+  whileControl: (oldPage,newPage) => oldPage === newPage,
   lapse: 5000
 }
 var wp = wm.monitor('http://www.google.com', options)
