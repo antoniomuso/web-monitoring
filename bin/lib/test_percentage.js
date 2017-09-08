@@ -3,9 +3,7 @@ const leven = require('leven')
 
 
 module.exports = async function (nTest, uri) {
-    
     if (nTest <= 0) throw new Error('nTest must be >0')
-
     var opt = {
         uri: uri,
         headers: {
@@ -26,12 +24,12 @@ module.exports = async function (nTest, uri) {
         await request(opt).then((pageBody) => {  
             percentage = Math.max(percentage, (leven(page, pageBody)/page.length)) 
             page = pageBody
-            console.log(`percentage: ${percentage} nTest: ${i}`)
+            //console.log(`percentage: ${percentage} nTest: ${i}`)
         }).catch((err) => {
             throw err
         })
     }
-    console.log(`Max percentage: ${percentage}`)
+    //console.log(`Max percentage: ${percentage}`)
 
     return percentage
 

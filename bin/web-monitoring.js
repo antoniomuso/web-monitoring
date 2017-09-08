@@ -5,7 +5,7 @@
 const wm = require('./../index.js')
 const commandLineArgs = require('command-line-args')
 const nodemailer = require('nodemailer');
-const bp = require('./lib/test_percentage.js')
+const bp = require('./lib/worker_launcher_test.js')
 
 const optionDefinitionsArgs = [
     { name: 'uri', alias: 'u', type: String },
@@ -40,6 +40,7 @@ if (values.email && values.email.length === 3) {
         text: `${values.uri} was change`
     }
 }
+if (values.NumberOfTest <= 0) throw new Error('nTest must be >0')
 if (!values.uri) throw new URIError('Uri is obligatory')
 ;(async function () {
     var options = {
