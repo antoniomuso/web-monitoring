@@ -1,7 +1,6 @@
-# web-monitoring
-wb-monitoring is a small web page monitoring written in node.js, you can monitor changing of a web page.
-
+# web-monitoring [![NPM Version](https://img.shields.io/npm/v/web-monitoring.svg)](https://www.npmjs.com/package/web-monitoring) [![dependencies Status](https://david-dm.org/antoniomuso/web-monitoring/status.png)](https://david-dm.org/antoniomuso/web-monitoring)
 [![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+> Web-monitoring is a small web page monitoring written in node.js, you can monitor changing of a web page.
 
 ## How to install
 `npm install web-monitoring -g`
