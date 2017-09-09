@@ -1,6 +1,8 @@
 # web-monitoring
 wb-monitoring is a small web page monitoring written in node.js, you can monitor changing of a web page.
 
+[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+
 ## How to install
 `npm install web-monitoring -g`
 ## Use application
