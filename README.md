@@ -14,7 +14,7 @@ or
 web-monitoring http://google.com -e myname@host.com passwordmyname myname@host.com
 or
 web-monitoring http://google.com -l 5000 -p 0.1 -e myname@host.com passwordmyname myname@host.com -loop
-Without command -loop, the program not stop at first page change
+Without command -loop, the program stop at first page change
 ```
 
 ## Use example 1°
