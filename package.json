@@ -27,6 +27,7 @@
     "nodemailer": "^4.0.1",
     "request": "^2.81.0",
     "request-promise": "^4.2.1",
+    "valid-url": "^1.0.9",
     "worker-nodes": "^1.5.0"
   },
   "preferGlobal": true

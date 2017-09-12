@@ -2,6 +2,7 @@
 
 // web-monitoring 'http://google.it' 2000
 const wm = require('./../index.js')
+const vuri = require('valid-url')
 const commandLineArgs = require('command-line-args')
 const nodemailer = require('nodemailer')
 const bp = require('./lib/worker_launcher_test.js')
@@ -16,6 +17,8 @@ const optionDefinitionsArgs = [
 ]
 
 var values = commandLineArgs(optionDefinitionsArgs)
+
+if (!vuri.isUri(values.uri)) throw new Error(`Invalid uri: ${values.uri}`)
 
 if (values.email && values.email.length === 3) {
   var reg = /@.*(\.(com|it|org|net))$/
