@@ -3,6 +3,7 @@
 // web-monitoring 'http://google.it' 2000
 const wm = require('./../index.js')
 const vuri = require('valid-url')
+const url = require('url')
 const commandLineArgs = require('command-line-args')
 const nodemailer = require('nodemailer')
 const bp = require('./lib/worker_launcher_test.js')

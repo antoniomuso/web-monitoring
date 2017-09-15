@@ -24,7 +24,7 @@
   "dependencies": {
     "command-line-args": "^4.0.7",
     "leven": "^2.1.0",
-    "nodemailer": "^4.0.1",
+    "nodemailer": "^4.1.0",
     "request": "^2.81.0",
     "request-promise": "^4.2.1",
     "valid-url": "^1.0.9",
