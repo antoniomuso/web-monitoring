@@ -7,6 +7,7 @@ const url = require('url')
 const commandLineArgs = require('command-line-args')
 const nodemailer = require('nodemailer')
 const os = require('os')
+// Use only a core for windows os
 var bp = os.type() !== 'Windows_NT' 
    ? require('./lib/worker_launcher_test.js') 
    : require('./lib/test_percentage.js')
