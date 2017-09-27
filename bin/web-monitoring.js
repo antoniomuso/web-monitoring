@@ -6,7 +6,10 @@ const vuri = require('valid-url')
 const url = require('url')
 const commandLineArgs = require('command-line-args')
 const nodemailer = require('nodemailer')
-const bp = require('./lib/worker_launcher_test.js')
+const os = require('os')
+var bp = os.type() !== 'Windows_NT' 
+   ? require('./lib/worker_launcher_test.js') 
+   : require('./lib/test_percentage.js')
 
 const optionDefinitionsArgs = [
     { name: 'uri', alias: 'u', type: String, defaultOption: true },
