@@ -17,7 +17,7 @@ web-monitoring http://google.com -l 5000 -p 0.1 -e myname@host.com passwordmynam
 Without command -loop, the program stop at first page change
 ```
 
-## Use example 1°
+## Use example 1<sup>st</sup>
 ```javascript
 var wm = require('web-monitoring')
 var options = 
@@ -36,7 +36,7 @@ var wp = wm.monitor('http://www.google.com', options)
            })
       .on('error', (err) => console.log(error))
 ``` 
-## Use Example 2°
+## Use Example 2<sup>nd</sup>
 Allert will be called when oldPage is different from newPage of 0.1 
 ```javascript
 var wm = require('web-monitoring')
