@@ -1,5 +1,5 @@
 const request = require('request-promise')
-const leven = require('leven')
+const leven = require('node_leven_distance')
 
 module.exports = async function (nTest, uri) {
   if (nTest <= 0) throw new Error('nTest must be >0')
