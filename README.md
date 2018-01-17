@@ -23,6 +23,7 @@ or
 web-monitoring http://google.com -l 5000 -p 0.1 -e myname@host.com passwordmyname myname@host.com -loop
 Without command -loop, the program stop at first page change
 ```
+**I recommend setting manually percentage of page change with dynamic pages**
 
 ## Use example 1<sup>st</sup>
 ```javascript
