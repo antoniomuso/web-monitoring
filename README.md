@@ -23,7 +23,7 @@ or
 web-monitoring http://google.com -l 5000 -p 0.1 -e myname@host.com passwordmyname myname@host.com -loop
 Without command -loop, the program stop at first page change
 ```
-**I recommend setting manually percentage of page change with dynamic pages,0 is the minimum value, 1 is the maximum value**
+**I recommend setting manually percentage of page change with dynamic pages, 0 is the minimum value, 1 is the maximum value**
 ```
 web-monitoring http://google.com -p 0.2
 ```
