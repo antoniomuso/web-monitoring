@@ -1,4 +1,4 @@
-const request = require('request-promise')
+const request = require('request-promise-native')
 const leven = require('node_leven_distance')
 
 module.exports = async function (nTest, uri) {
