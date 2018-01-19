@@ -26,7 +26,7 @@
     "node_leven_distance": "^1.0.3",
     "nodemailer": "^4.1.0",
     "request": "^2.81.0",
-    "request-promise": "^4.2.1",
+    "request-promise-native": "^1.0.5",
     "valid-url": "^1.0.9",
     "worker-nodes": "^1.5.0"
   },
