@@ -75,7 +75,10 @@ if (!values.uri) throw new URIError('Uri is obligatory')
               if (!values.loop) wp.stop()
             })
             .on('error', (error) => {
-              console.log(error)
+              console.error(error)
+              // I Return to monitoring
+              wp.stop()
+              wp.start()
             })
     })().catch((err) => {
       throw new Error(err)
