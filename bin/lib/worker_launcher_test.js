@@ -2,28 +2,23 @@ const WorkerNode = require('worker-nodes')
 const path = require('path')
 module.exports = async function (nTest, uri) {
   console.log('Running the tests')
-  // var worker = new WorkerNode(path.join(__dirname, 'test_percentage.js'))
+  var worker = new WorkerNode(path.join(__dirname, 'test_percentage.js'))
   let cores = require('os').cpus().length
   var jobs = []
-  var workers = []
     // Tests for Each job
   let testOnEach = Math.round(nTest / cores)
   let test = nTest
   for (let i = 0; i < cores; i++) {
-    let worker = new WorkerNode(path.join(__dirname, 'test_percentage.js'))
     if (test <= testOnEach) {
       jobs.push(worker.call(test, uri))
       break
     }
     jobs.push(worker.call(testOnEach, uri))
     test -= testOnEach
-    workers.push(worker)
   }
     // wait unti all jobs finish
   await Promise.all(jobs)
-  workers.forEach((work) => {
-    work.terminate()
-  })
+  worker.terminate()
     // Take Max value result from job and return
   let value = 0
   for (let i = 0; i < jobs.length; i++) {
