@@ -1,4 +1,5 @@
 const request = require('request-promise-native')
+const sanitizeHtml = require('sanitize-html')
 const leven = require('node_leven_distance')
 
 module.exports = async function (nTest, uri) {
@@ -11,8 +12,8 @@ module.exports = async function (nTest, uri) {
   }
   let page
   await request(opt).then((pageBody) => {
-    page = pageBody
-        // console.log(pageBody.length)
+    page = sanitizeHtml(pageBody)
+    // console.log(page.length)
   }).catch((err) => {
     throw err
   })
@@ -21,8 +22,9 @@ module.exports = async function (nTest, uri) {
 
   for (let i = 0; i < nTest; i++) {
     await request(opt).then((pageBody) => {
-      percentage = Math.max(percentage, (leven(page, pageBody) / page.length))
-      page = pageBody
+      let clear = sanitizeHtml(pageBody)
+      percentage = Math.max(percentage, (leven(page, clear) / page.length))
+      page = clear
       console.log(`percentage: ${percentage} nTest: ${i}`)
     }).catch((err) => {
       throw err
