@@ -1,34 +1,21 @@
 # web-monitoring [![NPM Version](https://img.shields.io/npm/v/web-monitoring.svg)](https://www.npmjs.com/package/web-monitoring) [![node](http://img.shields.io/badge/node->=8.4.0-brightgreen.svg)]() [![dependencies Status](https://david-dm.org/antoniomuso/web-monitoring/status.png)](https://david-dm.org/antoniomuso/web-monitoring) [![Build Status](https://travis-ci.org/antoniomuso/web-monitoring.svg?branch=master)](https://travis-ci.org/antoniomuso/web-monitoring)
 [![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard) 
-> Web-monitoring is a small web page monitoring written in node.js, you can monitor changing of a web page. Compatible with **Node v8.4.0** and above.
+> Web-monitoring is a small web page monitoring lib written in node.js, you can monitor changing of a web page. Compatible with **Node v8.4.0** and above.
 
 ## How to install
-`npm install web-monitoring -g`
-## Use application
-If you want to monitor a page with alert on terminal, use:
-```
-web-monitoring http://google.com
-```
-if you want to receive alert on email, use:
-```
-web-monitoring http://google.com -e myname@host.com passwordmyname myname@host.com
-```
-Below are more specific options
-```
-web-monitoring [uri] -l [lapse of control] -p [percentage of page changing] -t [number of test for calculate automatic percentage of page changing] -e [email sender] [password sender] [email receiver]
-web-monitoring http://google.com -l 5000 -p 0.1
-or 
-web-monitoring http://google.com -l 5000 -p 0.1 -e myname@host.com passwordmyname myname@host.com
-or
-web-monitoring http://google.com -l 5000 -p 0.1 -e myname@host.com passwordmyname myname@host.com -loop
-Without command -loop, the program stop at first page change
-```
-**I recommend setting manually percentage of page change with dynamic pages, 0 is the minimum value, 1 is the maximum value**
-```
-web-monitoring http://google.com -p 0.2
-```
+`npm install web-monitoring --save`
 
-## Use example 1<sup>st</sup>
+## How To Use
+
+```js
+var options =
+{
+  whileControl: Function,        // function called when lapse expired. if returns true, the event 'alert' will be call.
+  lapse: Number,   // lapse time in ms.
+  percentageDiff: Number,   // percentage difference  that is needed to call 'alert' event. This option not need if                                       // whileControl function is setted.  
+}
+```
+Example:
 ```javascript
 var wm = require('web-monitoring')
 var options = 
@@ -47,8 +34,7 @@ var wp = wm.monitor('http://www.google.com', options)
            })
       .on('error', (err) => console.log(error))
 ``` 
-## Use Example 2<sup>nd</sup>
-Allert will be called when oldPage is different from newPage of 0.1 
+Example:
 ```javascript
 var wm = require('web-monitoring')
 var options = 
@@ -67,4 +53,5 @@ var wp = wm.monitor('http://www.google.com', options)
            })
       .on('error', (err) => console.log(error))
 ``` 
+Allert will be called when oldPage is different from newPage of 0.1.
 
