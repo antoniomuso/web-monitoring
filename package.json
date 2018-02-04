@@ -1,15 +1,12 @@
 {
   "name": "web-monitoring",
-  "version": "1.2.13",
+  "version": "2.0.0",
   "description": "Simple web monitoring in nodejs",
   "main": "index.js",
   "scripts": {
     "test": "node ./test/test.js",
     "test2": "node ./test/test2.js",
     "test3": "node ./test/test3.js"
-  },
-  "bin": {
-    "web-monitoring": "bin/web-monitoring.js"
   },
   "repository": {
     "type": "git",
@@ -22,16 +19,11 @@
   },
   "homepage": "https://github.com/antoniomuso/web-monitoring#readme",
   "dependencies": {
-    "command-line-args": "^4.0.7",
     "node_leven_distance": "^1.0.3",
-    "nodemailer": "^4.1.0",
     "request": "^2.81.0",
     "request-promise-native": "^1.0.5",
-    "sanitize-html": "^1.17.0",
-    "valid-url": "^1.0.9",
-    "worker-nodes": "^1.5.0"
+    "sanitize-html": "^1.17.0"
   },
-  "preferGlobal": true,
   "devDependencies": {
     "standard": "^10.0.3"
   }
