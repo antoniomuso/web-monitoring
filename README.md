@@ -12,7 +12,7 @@ var options =
 {
   whileControl: Function,        // function called when lapse expired. if returns true, the event 'alert' will be call.
   lapse: Number,   // lapse time in ms.
-  percentageDiff: Number,   // percentage difference  that is needed to call 'alert' event. This option not need if whileControl function is setted.                                        
+  percentageDiff: Number,   // percentage difference  that is needed to call 'alert' event. This option does not need if whileControl function is set.                                        
 }
 ```
 Example:
