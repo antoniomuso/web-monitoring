@@ -55,4 +55,14 @@ var wp = wm.monitor('http://www.google.com', options)
       .on('error', (err) => console.log(error))
 ``` 
 Allert will be called when oldPage is different from newPage of 0.1.
+## Authors
+
+* **Antonio Musolino** - [antoniomuso](https://github.com/antoniomuso)
+
+
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
 
