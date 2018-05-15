@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/antoniomuso/web-monitoring#readme",
   "dependencies": {
-    "node_leven_distance": "^1.0.3",
+    "leven": "^2.1.0",
     "request": "^2.81.0",
     "request-promise-native": "^1.0.5",
     "sanitize-html": "^1.17.0"
