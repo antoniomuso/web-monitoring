@@ -6,7 +6,9 @@
   "scripts": {
     "test": "node ./test/test.js",
     "test2": "node ./test/test2.js",
-    "test3": "node ./test/test3.js"
+    "test3": "node ./test/test3.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -22,9 +24,11 @@
     "leven": "^2.1.0",
     "request": "^2.81.0",
     "request-promise-native": "^1.0.5",
-    "sanitize-html": "^1.17.0"
+    "sanitize-html": "^1.17.0",
+    "snyk": "^1.332.1"
   },
   "devDependencies": {
     "standard": "^10.0.3"
-  }
+  },
+  "snyk": true
 }
