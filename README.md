@@ -1,6 +1,6 @@
-# web-monitoring [![NPM Version](https://img.shields.io/npm/v/web-monitoring.svg)](https://www.npmjs.com/package/web-monitoring) [![node](http://img.shields.io/badge/node->=8.4.0-brightgreen.svg)]() [![dependencies Status](https://david-dm.org/antoniomuso/web-monitoring/status.png)](https://david-dm.org/antoniomuso/web-monitoring) [![Build Status](https://travis-ci.org/antoniomuso/web-monitoring.svg?branch=master)](https://travis-ci.org/antoniomuso/web-monitoring)
+# web-monitoring [![NPM Version](https://img.shields.io/npm/v/web-monitoring.svg)](https://www.npmjs.com/package/web-monitoring) [![node](http://img.shields.io/badge/node->=14.x.x-brightgreen.svg)]() [![dependencies Status](https://david-dm.org/antoniomuso/web-monitoring/status.png)](https://david-dm.org/antoniomuso/web-monitoring)
 [![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard) 
-> Web-monitoring is a small web page monitoring lib written in node.js, you can monitor changing of a web page. Compatible with **Node v8.4.0** and above.
+> Web-monitoring is a small web page monitoring lib written in node.js, you can monitor changing of a web page. Compatible with **Node v14.0.0** and above.
 ## App
 [web-monitoring-app](https://github.com/antoniomuso/web-monitoring-app)
 ## How to install
@@ -13,7 +13,8 @@ var options =
 {
   whileControl: Function,        // function called when lapse expired. if returns true, the event 'alert' will be call.
   lapse: Number,   // lapse time in ms.
-  percentageDiff: Number,   // percentage difference  that is needed to call 'alert' event. This option does not need if whileControl function is set.                                        
+  percentageDiff: Number,   // percentage difference  that is needed to call 'alert' event. This option does not need if whileControl function is set.   
+  got: Object // Got options
 }
 ```
 Example:
@@ -41,7 +42,7 @@ var wm = require('web-monitoring')
 var options = 
 { 
   lapse: 5000,
-  percentageDiff: 0.1
+  percentageDiff: 0.1,
 }
 var wp = wm.monitor('http://www.google.com', options)
       .start()

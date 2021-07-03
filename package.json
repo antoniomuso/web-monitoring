@@ -1,12 +1,11 @@
 {
   "name": "web-monitoring",
-  "version": "2.1.0",
+  "version": "3.0.1",
   "description": "Simple web monitoring in nodejs",
   "main": "index.js",
   "scripts": {
-    "test": "node ./test/test.js",
-    "test2": "node ./test/test2.js",
-    "test3": "node ./test/test3.js"
+    "lint": "eslint --fix",
+    "test": "npm run lint && tap --100 --coverage-report=lcov test/*test.js"
   },
   "repository": {
     "type": "git",
@@ -19,12 +18,27 @@
   },
   "homepage": "https://github.com/antoniomuso/web-monitoring#readme",
   "dependencies": {
-    "leven": "^2.1.0",
-    "request": "^2.81.0",
-    "request-promise-native": "^1.0.5",
-    "sanitize-html": "^1.17.0"
+    "got": "^11.8.2",
+    "leven": "^3.1.0",
+    "sanitize-html": "^2.4.0"
   },
   "devDependencies": {
-    "standard": "^10.0.3"
+    "eslint": "^7.28.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-prettier-standard": "^4.0.1",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "nock": "^13.1.0",
+    "prettier": "^2.3.1",
+    "prettier-config-standard": "^4.0.0",
+    "sinon": "^11.1.1",
+    "tap": "^15.0.9"
+  },
+  "volta": {
+    "node": "14.17.0",
+    "npm": "7.17.0"
   }
 }
