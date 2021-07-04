@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint --fix",
-    "test": "npm run lint && tap --100 --coverage-report=lcov test/*test.js"
+    "test": "npm run lint && tap --100 --no-browser --coverage-report=lcov test/*test.js",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,8 @@
     "sanitize-html": "^2.4.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
     "eslint": "^7.28.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-prettier-standard": "^4.0.1",
@@ -31,6 +34,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-promise": "^5.1.0",
+    "husky": "^7.0.0",
     "nock": "^13.1.0",
     "prettier": "^2.3.1",
     "prettier-config-standard": "^4.0.0",
