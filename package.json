@@ -21,7 +21,7 @@
   "dependencies": {
     "got": "^11.8.2",
     "leven": "^3.1.0",
-    "sanitize-html": "^2.4.0"
+    "sanitize-html": "^2.5.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.1.4",
