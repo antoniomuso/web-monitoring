@@ -1,4 +1,4 @@
-# web-monitoring [![NPM Version](https://img.shields.io/npm/v/web-monitoring.svg)](https://www.npmjs.com/package/web-monitoring) [![node](http://img.shields.io/badge/node->=14.x.x-brightgreen.svg)]() [![dependencies Status](https://david-dm.org/antoniomuso/web-monitoring/status.png)](https://david-dm.org/antoniomuso/web-monitoring)
+# web-monitoring [![NPM Version](https://img.shields.io/npm/v/web-monitoring.svg)](https://www.npmjs.com/package/web-monitoring) [![node](http://img.shields.io/badge/node->=14.x.x-brightgreen.svg)]()
 [![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard) 
 > Web-monitoring is a small web page monitoring lib written in node.js, you can monitor changing of a web page. Compatible with **Node v14.0.0** and above.
 ## App
