@@ -1,0 +1,14 @@
+# 1.0.0 (2021-11-14)
+
+
+### Bug Fixes
+
+* upgrade sanitize-html from 2.4.0 to 2.5.1 ([2af8548](https://github.com/antoniomuso/web-monitoring/commit/2af8548b89dcc3df401ac5d0a8cfc7f4fddeb26a))
+* **sanitize:** fix sanitize bug ([4563cfd](https://github.com/antoniomuso/web-monitoring/commit/4563cfd82b53aadef0fdd14d0be3bcea178ebd0d))
+
+
+### Features
+
+* added is-ci ([0b58b20](https://github.com/antoniomuso/web-monitoring/commit/0b58b20aa2a4e18e6042d85c2fbe6f3cedb53335))
+* update to node16 ([a69a82c](https://github.com/antoniomuso/web-monitoring/commit/a69a82c411e9166b4efc2a9d818ae23620247def))
+* upgrade to version 2.0.0 ([3aab929](https://github.com/antoniomuso/web-monitoring/commit/3aab9292d6a9b42cda7c7ca4a034174661613248))
