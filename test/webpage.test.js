@@ -106,7 +106,7 @@ test('wm should with while control', ({ plan, ok, same, end, notOk }) => {
   const options = {
     lapse: 500,
     whileControl,
-    percentageDiff: 0.004 // if whileControl exist this will not use
+    percentageDiff: 0.003 // if whileControl exist this will not use
   }
   const counter = sinon.spy()
 
