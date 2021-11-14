@@ -1,5 +1,4 @@
 language: node_js
 
 node_js:
-  - "8.4.0"
-  - "8.9.4"
+  - "16.13.0"

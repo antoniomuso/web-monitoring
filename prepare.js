@@ -1,13 +1,13 @@
-'use strict';
+'use strict'
 
-let isCi = false;
+let isCi = false
 
 try {
-    isCi = require('is-ci');
+  isCi = require('is-ci')
 } catch (_) {
-    isCi = true;
+  isCi = true
 }
 
 if (!isCi) {
-    require('husky').install();
+  require('husky').install()
 }
