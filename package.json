@@ -8,6 +8,10 @@
     "test": "npm run lint && tap --100 --no-browser --coverage-report=lcov test/*test.js",
     "prepare": "husky install"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/antoniomuso/web-monitoring.git"
@@ -34,6 +38,12 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-promise": "^5.1.0",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/commit-analyzer": "^9.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^8.0.2",
+    "@semantic-release/npm": "^8.0.3",
+    "@semantic-release/release-notes-generator": "^10.0.2",
     "husky": "^7.0.0",
     "nock": "^13.1.0",
     "prettier": "^2.3.1",
