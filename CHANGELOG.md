@@ -1,3 +1,10 @@
+# [3.1.0](https://github.com/antoniomuso/web-monitoring/compare/v3.0.0...v3.1.0) (2021-11-14)
+
+
+### Features
+
+* added branch sync ([b1a7c08](https://github.com/antoniomuso/web-monitoring/commit/b1a7c08c2f01f3a0c3fcfe8828c6342c4f12f0b0))
+
 # [3.0.0](https://github.com/antoniomuso/web-monitoring/compare/v2.0.0...v3.0.0) (2021-11-14)
 
 
