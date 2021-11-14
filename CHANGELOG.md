@@ -1,3 +1,13 @@
+# [2.0.0](https://github.com/antoniomuso/web-monitoring/compare/v1.0.0...v2.0.0) (2021-11-14)
+
+
+* feat!: bump to 2.0.0 ([124d9b6](https://github.com/antoniomuso/web-monitoring/commit/124d9b60507cf76d63794a3246e94d5e3bbc2446))
+
+
+### BREAKING CHANGES
+
+* bump to 2.0.0
+
 # 1.0.0 (2021-11-14)
 
 
