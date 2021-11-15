@@ -1,3 +1,10 @@
+# [3.2.0](https://github.com/antoniomuso/web-monitoring/compare/v3.1.0...v3.2.0) (2021-11-15)
+
+
+### Features
+
+* test releaser ([5624ced](https://github.com/antoniomuso/web-monitoring/commit/5624cedb9a4943a52c023166b377f99baf31e3c3))
+
 # [3.1.0](https://github.com/antoniomuso/web-monitoring/compare/v3.0.0...v3.1.0) (2021-11-14)
 
 
