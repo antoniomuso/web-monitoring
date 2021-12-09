@@ -1,3 +1,11 @@
+## [3.2.1](https://github.com/antoniomuso/web-monitoring/compare/v3.2.0...v3.2.1) (2021-12-09)
+
+
+### Bug Fixes
+
+* upgrade got from 11.8.2 to 11.8.3 ([a7371da](https://github.com/antoniomuso/web-monitoring/commit/a7371dac1ebf3a2cde79b3032143e262f79412c6))
+* upgrade sanitize-html from 2.5.1 to 2.5.3 ([69b9b25](https://github.com/antoniomuso/web-monitoring/commit/69b9b255d26d2095ff27ea5e9664b9e83fb3f84a))
+
 # [3.2.0](https://github.com/antoniomuso/web-monitoring/compare/v3.1.0...v3.2.0) (2021-11-15)
 
 
