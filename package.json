@@ -24,7 +24,7 @@
   "homepage": "https://github.com/antoniomuso/web-monitoring#readme",
   "dependencies": {
     "got": "^11.8.3",
-    "leven": "^3.1.0",
+    "leven": "^4.0.0",
     "sanitize-html": "^2.6.1"
   },
   "devDependencies": {
