@@ -1,3 +1,10 @@
+## [3.2.2](https://github.com/antoniomuso/web-monitoring/compare/v3.2.1...v3.2.2) (2022-03-07)
+
+
+### Bug Fixes
+
+* upgrade sanitize-html from 2.5.3 to 2.7.0 ([136e498](https://github.com/antoniomuso/web-monitoring/commit/136e4985b2a0d99715f0e0bc68bb359497cfb102))
+
 ## [3.2.1](https://github.com/antoniomuso/web-monitoring/compare/v3.2.0...v3.2.1) (2021-12-09)
 
 
