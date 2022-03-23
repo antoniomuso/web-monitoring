@@ -51,7 +51,7 @@
     "prettier": "^2.3.1",
     "prettier-config-standard": "^4.0.0",
     "sinon": "^13.0.1",
-    "tap": "^15.0.9"
+    "tap": "^16.0.1"
   },
   "volta": {
     "node": "16.13.0",
